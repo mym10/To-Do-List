@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/ToDo.svg">
+
+  </head>
+  <body>
+    <div class="box" id="heading">
+      <h1> <%= DAY %> </h1>
+    </div>
+
+    <div class="box">
+       <% for(var i = 0; i < NEW.length; i++){ %>
+         <div class="item">
+           <input type="checkbox">
+           <p> <%= NEW[i] %></p>
+         </div>
+        <% } %>
+
+        <form class="item" action="/" method="post">
+          <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+          <button class="plus" type="submit" name="button">+</button>
+        </form>
+    </div>
+
+    <footer >
+      <p>Made by Mythri</p>
+    </footer>
+
+
+  </body>
+</html>
