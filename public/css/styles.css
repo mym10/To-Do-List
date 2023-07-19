@@ -99,3 +99,20 @@ footer {
   text-align: center;
   font-family: 'Montserrat';
 }
+
+.nav-item{
+  list-style-type: none;
+  float: left;
+}
+
+.nav-link{
+  text-decoration: none;
+}
+
+li a i {
+    margin-right: 10px;
+}
+
+li a {
+    padding: 12px 30px;
+}

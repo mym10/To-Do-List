@@ -8,12 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/ToDo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
 
   </head>
   <body>
-    <div class="box" id="heading">
-      <h1> <%= DAY %> </h1>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/"><i class="far fa-calendar-alt"></i>Today</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/work"><i class="far fa-clone"></i>Work</a>
+        </li>
+      </ul>
     </div>
+    <div class="box" id="heading">
+      <h1> <%= ListTitle %> </h1>
+    </div>
+
 
     <div class="box">
        <% for(var i = 0; i < NEW.length; i++){ %>
@@ -25,7 +37,7 @@
 
         <form class="item" action="/" method="post">
           <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-          <button class="plus" type="submit" name="button">+</button>
+          <button class="plus" type="submit" name="List" value=<%= ListTitle %>>+</button>   <!--adds in value list -->
         </form>
     </div>
 
